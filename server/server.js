@@ -35,7 +35,9 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
-
+app.get("/api/health", (req, res) => {
+    res.send("ok");
+});
 app.use(notFound);
 app.use(errorHandler);
 
