@@ -43,19 +43,19 @@ const AdminProductsPage = () => {
 
   return (
     <div className="container-page space-y-6">
-      <h1 className="text-2xl font-bold">Manage Products</h1>
+      <h1 className="text-2xl font-bold">จัดการสินค้า</h1>
       <ProductForm onSubmit={editing ? update : create} initial={initialEdit} />
-      {editing && <button type="button" className="btn-outline" onClick={() => setEditing(null)}>Cancel Edit</button>}
+      {editing && <button type="button" className="btn-outline" onClick={() => setEditing(null)}>ยกเลิกการแก้ไข</button>}
       <div className="space-y-2">
         {products.map((p) => (
           <div key={p._id} className="card flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="font-semibold">{p.name}</p>
-              <p className="text-sm text-stone-600">${p.price.toFixed(2)} | Stock {p.stock}</p>
+              <p className="text-sm text-stone-600">฿{p.price.toFixed(2)} | คงเหลือ {p.stock}</p>
             </div>
             <div className="flex gap-2">
-              <button type="button" className="btn-outline" onClick={() => setEditing(p)}>Edit</button>
-              <button type="button" className="btn-outline border-red-600 text-red-600" onClick={() => remove(p._id)}>Delete</button>
+              <button type="button" className="btn-outline" onClick={() => setEditing(p)}>แก้ไข</button>
+              <button type="button" className="btn-outline border-red-600 text-red-600" onClick={() => remove(p._id)}>ลบ</button>
             </div>
           </div>
         ))}

@@ -12,24 +12,24 @@ const MaterialCalculator = () => {
 
   return (
     <section className="card">
-      <h2 className="mb-4 text-xl font-bold">Material Calculator</h2>
+      <h2 className="mb-4 text-xl font-bold">คำนวณวัสดุเบื้องต้น</h2>
       <div className="grid gap-4 md:grid-cols-3">
         <div>
-          <label className="text-sm">Cement Area (m?)</label>
+          <label className="text-sm">พื้นที่เทปูน (ตร.ม.)</label>
           <input type="number" className="mt-1 w-full rounded border p-2" value={cementArea} onChange={(e) => setCementArea(Number(e.target.value))} />
-          <label className="mt-2 block text-sm">Thickness (m)</label>
+          <label className="mt-2 block text-sm">ความหนา (เมตร)</label>
           <input type="number" step="0.01" className="mt-1 w-full rounded border p-2" value={cementThickness} onChange={(e) => setCementThickness(Number(e.target.value))} />
-          <p className="mt-2 text-sm font-semibold">Estimated Bags: {cementBags}</p>
+          <p className="mt-2 text-sm font-semibold">ถุงปูนที่คาดว่าจะใช้: {cementBags}</p>
         </div>
         <div>
-          <label className="text-sm">Brick Wall Area (m?)</label>
+          <label className="text-sm">พื้นที่ผนังอิฐ (ตร.ม.)</label>
           <input type="number" className="mt-1 w-full rounded border p-2" value={brickArea} onChange={(e) => setBrickArea(Number(e.target.value))} />
-          <p className="mt-2 text-sm font-semibold">Estimated Bricks: {bricks}</p>
+          <p className="mt-2 text-sm font-semibold">จำนวนอิฐที่คาดว่าจะใช้: {bricks}</p>
         </div>
         <div>
-          <label className="text-sm">Tile Area (m?)</label>
+          <label className="text-sm">พื้นที่ปูกระเบื้อง (ตร.ม.)</label>
           <input type="number" className="mt-1 w-full rounded border p-2" value={tileArea} onChange={(e) => setTileArea(Number(e.target.value))} />
-          <p className="mt-2 text-sm font-semibold">Estimated Tile Boxes: {tileBoxes}</p>
+          <p className="mt-2 text-sm font-semibold">จำนวนกล่องกระเบื้องที่คาดว่าจะใช้: {tileBoxes}</p>
         </div>
       </div>
     </section>

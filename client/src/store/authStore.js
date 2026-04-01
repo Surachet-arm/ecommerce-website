@@ -19,7 +19,7 @@ export const useAuthStore = create((set, get) => ({
       set({ user: data, loading: false });
       return true;
     } catch (error) {
-      set({ error: error.response?.data?.message || 'Login failed', loading: false });
+      set({ error: error.response?.data?.message || 'เข้าสู่ระบบไม่สำเร็จ', loading: false });
       return false;
     }
   },
@@ -32,7 +32,7 @@ export const useAuthStore = create((set, get) => ({
       set({ user: data, loading: false });
       return true;
     } catch (error) {
-      set({ error: error.response?.data?.message || 'Registration failed', loading: false });
+      set({ error: error.response?.data?.message || 'สมัครสมาชิกไม่สำเร็จ', loading: false });
       return false;
     }
   },

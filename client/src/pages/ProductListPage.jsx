@@ -25,11 +25,11 @@ const ProductListPage = () => {
 
   return (
     <div className="container-page">
-      <h1 className="mb-4 text-2xl font-bold">Products</h1>
+      <h1 className="mb-4 text-2xl font-bold">สินค้า</h1>
       <div className="mb-6 grid gap-3 md:grid-cols-3">
-        <input className="rounded border p-2" placeholder="Search products" value={search} onChange={(e) => setSearchParams({ search: e.target.value, category, page: 1 })} />
+        <input className="rounded border p-2" placeholder="ค้นหาสินค้า" value={search} onChange={(e) => setSearchParams({ search: e.target.value, category, page: 1 })} />
         <select className="rounded border p-2" value={category} onChange={(e) => setSearchParams({ search, category: e.target.value, page: 1 })}>
-          <option value="">All Categories</option>
+          <option value="">ทุกหมวดหมู่</option>
           {categories.map((cat) => <option key={cat._id} value={cat._id}>{cat.name}</option>)}
         </select>
       </div>

@@ -15,15 +15,15 @@ const RegisterPage = () => {
 
   return (
     <div className="container-page max-w-md">
-      <h1 className="mb-4 text-2xl font-bold">Register</h1>
+      <h1 className="mb-4 text-2xl font-bold">สมัครสมาชิก</h1>
       <form className="card grid gap-3" onSubmit={submit}>
-        <input className="rounded border p-2" placeholder="Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
-        <input className="rounded border p-2" type="email" placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
-        <input className="rounded border p-2" type="password" placeholder="Password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required />
+        <input className="rounded border p-2" placeholder="ชื่อ" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+        <input className="rounded border p-2" type="email" placeholder="อีเมล" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
+        <input className="rounded border p-2" type="password" placeholder="รหัสผ่าน" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required />
         {error && <p className="text-sm text-red-600">{error}</p>}
-        <button className="btn" type="submit" disabled={loading}>Create Account</button>
+        <button className="btn" type="submit" disabled={loading}>สร้างบัญชี</button>
       </form>
-      <p className="mt-3 text-sm">Already have an account? <Link className="text-brand-700" to="/login">Login</Link></p>
+      <p className="mt-3 text-sm">มีบัญชีอยู่แล้ว? <Link className="text-brand-700" to="/login">เข้าสู่ระบบ</Link></p>
     </div>
   );
 };
