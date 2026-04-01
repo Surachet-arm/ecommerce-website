@@ -21,6 +21,13 @@ const LoginPage = () => {
         <input className="rounded border p-2" type="password" placeholder="รหัสผ่าน" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} required />
         {error && <p className="text-sm text-red-600">{error}</p>}
         <button className="btn" type="submit" disabled={loading}>เข้าสู่ระบบ</button>
+        <div>บัญชีสำหรับทดลอง</div>
+        <tr>บัญชี admin</tr>
+        <tr>surachet@gmail.com</tr>
+        <tr>12345</tr>
+        <tr>บัญชี user</tr>
+        <tr>test@gmail.com</tr>
+        <tr>1234</tr>
       </form>
       <p className="mt-3 text-sm">ยังไม่มีบัญชี? <Link className="text-brand-700" to="/register">สมัครสมาชิก</Link></p>
     </div>
